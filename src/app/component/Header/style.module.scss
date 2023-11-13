@@ -1,0 +1,42 @@
+@import "../../style/config.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 50px;
+    background-color: transparent; // Assuming a dark theme from the design
+    color: $white;
+    font-family: $lato;
+  
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+  
+        li {
+          .link {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+  
+            &:hover {
+              color: $light-blue; // A light blue color for hover state
+            }
+            
+            &:active {
+                color: $light-blue; // A light blue color for hover state
+            }
+          }
+        }
+      }
+    }
+  }
