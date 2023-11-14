@@ -23,17 +23,14 @@
         li {
           .link {
             font-size: 18px;
-            color: white;
+            color: $white;
             text-decoration: none;
             padding: 0.5rem 1rem;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: transparent;
   
             &:hover {
               color: $light-blue; // A light blue color for hover state
-            }
-            
-            &:active {
-                color: $light-blue; // A light blue color for hover state
             }
           }
         }

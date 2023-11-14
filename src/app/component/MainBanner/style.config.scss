@@ -1,0 +1,91 @@
+@import "../../style/config.scss";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    height: 100vh; // Adjust based on actual design
+    background-color: transparent; // Dark blue background as per the design
+    color: $white; // White text color
+    position: relative;
+    overflow: hidden;
+    margin-left: 100px;
+    font-family: $lato;
+    font-weight: bold;
+  
+    h1 {
+      font-size: 3.5rem; // Large font size for the hero title
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: left;
+      max-width: 600px; // Adjust as per design for proper text wrapping
+      line-height: 1.2;
+      letter-spacing: -2px; // Adjust as per design preference
+        
+      
+      // Add media queries for responsive font sizing
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
+    }
+
+    .gradient {
+      background-image: linear-gradient(90deg, #1497D1, #F2F2F2);
+      background-clip: text;
+      -webkit-background-clip: text; // Pour la compatibilité avec Safari
+      -webkit-text-fill-color: transparent; // Pour la compatibilité avec Safari
+      }
+
+      .line{
+        background-color: $white;
+        height: 4px;
+        width: 150px;
+        margin: 50px 0;
+      }
+  
+    button {
+      height: 64px;
+      width: 200px;
+      background-color: $light-blue; // Bright blue for the button
+      color: $black; // White text color
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px; // Rounded edges
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: $blue; // Darker blue on hover
+      }
+  
+      &:focus {
+        outline: none; // Remove the default focus outline
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); // Custom focus style
+      }
+  
+      // Add media queries if needed for smaller screens
+      @media (max-width: 768px) {
+        padding: 0.8rem 1.6rem;
+      }
+    }
+  
+    // Decorative elements such as floating shapes or animations can be added here
+    // with pseudo-elements or additional divs
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10%; right: -10%;
+      width: 20%;
+      height: 20%;
+      background: url('/path-to-your-decorative-element.png') no-repeat center center;
+      background-size: cover;
+      transform: rotate(45deg);
+    }
+  }
+  

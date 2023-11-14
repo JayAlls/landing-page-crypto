@@ -7,10 +7,10 @@ const Header = () => (
         <nav className={styles.nav}>
             <ul>
                 <li><Link className={styles.link} href="/explore">Explore</Link></li>
-                <li><Link href="/collection">Collection</Link></li>
-                <li><Link href="/nfts">NFT's</Link></li>
-                <li><Link href="/blog">Blog</Link></li>
-                <li><Link href="/about">About</Link></li>
+                <li><Link className={styles.link} href="/collection">Collection</Link></li>
+                <li><Link  className={styles.link} href="/nfts">NFT's</Link></li>
+                <li><Link className={styles.link} href="/blog">Blog</Link></li>
+                <li><Link className={styles.link} href="/about">About</Link></li>
             </ul>
         </nav>
     </header>
