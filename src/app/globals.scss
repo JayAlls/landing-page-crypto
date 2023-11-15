@@ -1,11 +1,12 @@
 @import "./style/config.scss";
 
 body {
+
     max-width: 1440px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
+    overflow-x: hidden;
     background-color: $dark-blue;
-    overflow: hidden;
     font-family: $lato;
 }
