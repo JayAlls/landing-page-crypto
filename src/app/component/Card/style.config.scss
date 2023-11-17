@@ -1,11 +1,18 @@
 @import "../../style/config.scss";
 
 .profile-card {
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
   height: 615px;
   width: 454px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); // Centre la carte
   background-color: $white;
   clip-path: polygon(0 0, calc(100% - 100px) 0, 100% 100px, 100% 100%, 0 100%);
   box-shadow: 2px 2px 10px $black;
+
+  
   
   .profile-container {
     display: flex;

@@ -3,7 +3,6 @@
 .hero {
     display: flex;
     justify-content: center;
-    gap: 90px;
     align-items: self-start;
     height: 100vh; // Adjust based on actual design
     max-width: 100%;
@@ -79,17 +78,50 @@
       }
     }
   
-    // Decorative elements such as floating shapes or animations can be added here
-    // with pseudo-elements or additional divs
-    &::before {
-      content: '';
-      position: absolute;
-      top: -10%; right: -10%;
-      width: 20%;
-      height: 20%;
-      background: url('/path-to-your-decorative-element.png') no-repeat center center;
-      background-size: cover;
-      transform: rotate(45deg);
+    
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10%; right: -10%;
+    width: 20%;
+    height: 20%;
+    background: url('/path-to-your-decorative-element.png') no-repeat center center;
+    background-size: cover;
+    transform: rotate(45deg);
+  }
+
+  .cards-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; // Ajustez selon la largeur de vos cartes
+    height: 615px; // Hauteur basée sur la hauteur de vos cartes
+  
+    .card {
+      position: absolute; // Positionnement absolu pour superposer les cartes
+      transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    
+      &.active {
+        z-index: 3; // La carte de devant
+        opacity: 1; // Pleine opacité pour la carte active
+        transform: scale(1); // Agrandit légèrement la carte active
+      }
+    
+      &.second {
+        z-index: 2;
+        transform: scale(0.9) translate(90px, 70px);
+      }
+    
+      &.third {
+        z-index: 1;
+        transform: scale(0.8) translate(200px, 150px);
+      }
     }
   }
+}
   

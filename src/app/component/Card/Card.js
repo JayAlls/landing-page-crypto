@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.config.scss"
 
-const Card = () => {
+const Card = ({picture}) => {
   return (
     <aside className="profile-card">
         <div className='profile-container'>
@@ -12,7 +12,7 @@ const Card = () => {
             </div>
         </div>
         <div className='img-container'>
-            <img src='./cube.jpg' alt='NFT cube'/>
+            <img src={picture} alt={`NFT ${picture}`}/>
         </div>
         <div className="timer">
             <span>24H</span> : <span>44M</span> : <span>06S</span>
