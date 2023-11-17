@@ -1,3 +1,10 @@
+.main {
+  background-image: url('../../public/background_shape.svg');
+  background-size: contain; /* ou 'contain' selon votre besoin */
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
 .circleblur1 {
   position: absolute;
   width: 425px;

@@ -23,16 +23,6 @@
       max-width: 600px; // Adjust as per design for proper text wrapping
       line-height: 1.2;
       letter-spacing: -2px; // Adjust as per design preference
-        
-      
-      // Add media queries for responsive font sizing
-      @media (max-width: 768px) {
-        font-size: 2.5rem;
-      }
-  
-      @media (max-width: 480px) {
-        font-size: 2rem;
-      }
     }
 
     .gradient {
@@ -71,30 +61,17 @@
         outline: none; // Remove the default focus outline
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); // Custom focus style
       }
-  
-      // Add media queries if needed for smaller screens
-      @media (max-width: 768px) {
-        padding: 0.8rem 1.6rem;
-      }
     }
   
     
-  &::before {
-    content: '';
-    position: absolute;
-    top: -10%; right: -10%;
-    width: 20%;
-    height: 20%;
-    background: url('/path-to-your-decorative-element.png') no-repeat center center;
-    background-size: cover;
-    transform: rotate(45deg);
-  }
+  
 
   .cards-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 100px;
     width: 50%; // Ajustez selon la largeur de vos cartes
     height: 615px; // Hauteur basée sur la hauteur de vos cartes
   
