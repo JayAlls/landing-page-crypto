@@ -1,39 +1,99 @@
 @import "../../style/config.scss";
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 50px;
-    background-color: transparent; // Assuming a dark theme from the design
-    color: $white;
-    font-family: $lato;
-  
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 50px;
+  background-color: transparent; // Assuming a dark theme from the design
+  color: $white;
+  font-family: $lato;
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+
+    @include respond-to("medium") {
+      font-size: 20px;
     }
-  
-    nav {
-      ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-  
-        li {
-          .link {
-            font-size: 18px;
-            color: $white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s ease;
-            background-color: transparent;
-  
-            &:hover {
-              color: $light-blue; // A light blue color for hover state
-            }
+
+    @include respond-to("small") {
+      font-size: 18px;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+
+      li {
+        .link {
+          font-size: 18px;
+          color: $white;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          transition: all 0.3s ease;
+          background-color: transparent;
+
+          &:hover {
+            color: $light-blue; // A light blue color for hover state
           }
         }
       }
     }
   }
+
+
+  .burgerMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @include respond-to("medium") {
+    .burgerMenuButton {
+      display: block;
+    }
+
+    nav {
+      z-index: 10;
+      display: none;
+      width: 40%;
+      position: absolute;
+      top: 10%;
+      right: 0;
+      background-color: $dark-blue; // Utilisez une couleur de fond appropriée
+      transition: all 0.5 ease-in-out;
+
+      &.navActive {
+        display: block;
+      }
+
+      ul {
+        flex-direction: column;
+        gap: 0;
+        margin: 0 auto;
+        padding: 0;
+
+        li {
+          .link {
+            display: block;
+            max-width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

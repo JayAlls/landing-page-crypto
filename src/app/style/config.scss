@@ -10,3 +10,20 @@ $black: #100D0D;
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 $lato: "Lato", sans-serif;
+
+// MEDIA QUERIES 
+
+$breakpoint-mobile: 568px;
+$breakpoint-tablet: 768px;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "small" {
+        @media (max-width: $breakpoint-mobile) {
+            @content;
+        }
+    } @else if $breakpoint == "medium" {
+        @media (max-width: $breakpoint-tablet) {
+            @content;
+        }
+    }
+}
