@@ -14,15 +14,33 @@
     margin-top: 50px;
     font-family: $lato;
     font-weight: bold;
+
+    @include respond-to("medium") {
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
   
     h1 {
-      font-size: 96px; // Large font size for the hero title
+      font-size: 6vw; // Large font size for the hero title
       font-weight: bold;
       margin-bottom: 1rem;
       text-align: left;
       max-width: 600px; // Adjust as per design for proper text wrapping
       line-height: 1.2;
       letter-spacing: -2px; // Adjust as per design preference
+
+      @include respond-to("medium-large") {
+        font-size: 62px;
+      }
+
+      @include respond-to("medium") {
+        text-align: center;
+        width: 100%;
+      }
     }
 
     .gradient {
@@ -37,6 +55,9 @@
         height: 4px;
         width: 150px;
         margin: 50px 0;
+        @include respond-to("medium") {
+          width: 100%;
+        }
       }
   
     button {
@@ -60,6 +81,17 @@
       &:focus {
         outline: none; // Remove the default focus outline
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); // Custom focus style
+      }
+
+      @include respond-to("medium-large") {
+        height: 64px;
+        width: 260px;
+        margin-bottom: 80px;
+      }
+
+      @include respond-to("medium") {
+        width: 100%;
+        font-size: 16px;
       }
     }
   

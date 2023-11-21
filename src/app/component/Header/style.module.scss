@@ -71,8 +71,8 @@
       position: absolute;
       top: 10%;
       right: 0;
-      background-color: $dark-blue; // Utilisez une couleur de fond appropriée
-      transition: all 0.5 ease-in-out;
+      background-color: $dark-blue; 
+      transition: all 0.8s ease;
 
       &.navActive {
         display: block;

@@ -15,6 +15,7 @@ $lato: "Lato", sans-serif;
 
 $breakpoint-mobile: 568px;
 $breakpoint-tablet: 768px;
+$breakpoint-tablet-large: 968px;
 
 @mixin respond-to($breakpoint) {
     @if $breakpoint == "small" {
@@ -23,6 +24,10 @@ $breakpoint-tablet: 768px;
         }
     } @else if $breakpoint == "medium" {
         @media (max-width: $breakpoint-tablet) {
+            @content;
+        }
+    } @else if $breakpoint == "medium-large" {
+        @media (max-width: $breakpoint-tablet-large ) {
             @content;
         }
     }
